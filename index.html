@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Life of Gambler</title>
+  <link rel="icon" href="/assets/fav.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0c0c0c;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Cursor swap logic */
+    body {
+      cursor: url('/assets/bat.png'), auto;
+    }
+    body.hit {
+      cursor: url('/assets/bat-hit.png'), auto;
+    }
+  </style>
+</head>
+<body>
+
+  <section style="background:#1a1a1a">
+    <h1>💭 Dreaming of Pump</h1>
+    <img src="/assets/dream.png" alt="Dreaming of Pump" />
+  </section>
+
+  <section style="background:#2a2a2a">
+    <h1>📉 Losing Again</h1>
+    <img src="/assets/loss.png" alt="Loss" />
+  </section>
+
+  <section style="background:#1f1f1f">
+    <h1>🔁 Return to Gamble</h1>
+    <img src="/assets/return.png" alt="Return" />
+  </section>
+
+  <section style="background:#2f2f2f">
+    <h1>🚽 Degen Moments</h1>
+    <img src="/assets/degen.png" alt="Degen Life" />
+  </section>
+
+  <section style="background:#202020">
+    <h1>🌧️ Park Bench Depression</h1>
+    <img src="/assets/park.png" alt="Park Bench" />
+  </section>
+
+  <footer>
+    <p>Made by true degens. Not financial advice.</p>
+    <p><a href="https://x.com/meinymoo64258" target="_blank">Follow on Twitter</a></p>
+  </footer>
+
+  <script>
+    // Switch cursor to "bat-hit" briefly on click
+    document.body.addEventListener('click', () => {
+      document.body.classList.add('hit');
+      setTimeout(() => {
+        document.body.classList.remove('hit');
+      }, 150);
+    });
+  </script>
+
+</body>
+</html>
